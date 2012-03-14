@@ -2,7 +2,8 @@
 
 <p>Prints the full path and type of all the elements in a xsd file.</p>
 
-<p>Additionally, you can also specify a root element from which the paths will be printed.</p>
+<p>Additionally, you can also specify a root element from which the paths will be printed. <br />
+The element path and type are separated with \t.</p>
 
 <h3>Usage as standalone</h3>
 
@@ -31,4 +32,18 @@
 /shiporder/shipto/city  xs:string
 /shiporder/shipto/country       xs:string
 /shiporder/shipto/name  xs:string
+</code></pre>
+
+<p>And if we only want to print the "item" element:</p>
+
+<pre><code>java -jar xsd_elpath.jar shiporder.xsd item
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>/item   null
+/item/note      xs:string
+/item/price     xs:decimal
+/item/quantity  xs:positiveInteger
+/item/title     xs:string
 </code></pre>
