@@ -32,3 +32,15 @@ Yields the output:
     /shiporder/shipto/city  xs:string
     /shiporder/shipto/country       xs:string
     /shiporder/shipto/name  xs:string
+
+And if we only want to print the "item" element:
+
+    java -jar xsd_elpath.jar shiporder.xsd item
+
+Output:
+
+    /item   null
+    /item/note      xs:string
+    /item/price     xs:decimal
+    /item/quantity  xs:positiveInteger
+    /item/title     xs:string
